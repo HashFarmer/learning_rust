@@ -12,6 +12,7 @@ pub trait Draw{
 pub struct Screen{
     //用Box是因为这个Vec的元素大小是不确定的
     //但唯一确定的是它们implement了Draw这个trait
+    //Vec的元素是不是必须同质？Box<dyn >使异质元素可以像同质元素那样
     pub components: Vec<Box<dyn Draw>>,
 }
 

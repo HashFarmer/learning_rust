@@ -40,6 +40,9 @@ fn main() {
 //trait object的概念，dyn的概念
 //dynamic dispatch的概念
 //加不加dyn的区别
+//dyn Shape这种写法有点类似impl Shape这种，可以用来做类型名，实际上是一个类型集
+//这种写法使异质的数据元素，可以像同质元素
+//array必须是同质元素
   let shapes:[&dyn Shape; 4] = [
  &Circle{radius: 1.0},
  &Square{side: 3.0},
