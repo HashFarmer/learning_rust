@@ -1,0 +1,1 @@
+C:\Users\king\learning_rust\seperating_modules\target\debug\libseperating_modules.rlib: C:\Users\king\learning_rust\seperating_modules\src\front_of_house.rs C:\Users\king\learning_rust\seperating_modules\src\lib.rs
