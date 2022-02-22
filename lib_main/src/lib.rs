@@ -11,6 +11,9 @@ pub mod layer1_b{
     }
 }
 
+//拉到外层，在main中也可以短路径使用
+pub use crate::layer1_a::print_from_monsters;
+
 pub fn hello(){
     layer1_a::print_from_monsters();//layer1_a前面不需要super::，否则there are too many leading `super` keywords
 }

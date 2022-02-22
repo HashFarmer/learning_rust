@@ -12,7 +12,7 @@ use lib::print_from_monsters;
 //extern crate lib_main;//有没有这句话都行
 //use的目的就是缩短资源引用路径
 
-use lib_main::layer1_a::print_from_monsters;
+use lib_main::print_from_monsters;
 fn main(){
     print_from_monsters();
 }
