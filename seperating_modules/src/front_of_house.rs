@@ -1,3 +1,1 @@
-pub mod hosting {
-    pub fn add_to_waitlist() {}
-}
+pub mod hosting; //mod的2种查找方式。1、去所在文件的目录中查找指定文件。2、去与所在文件同名的目录里查找指定文件
