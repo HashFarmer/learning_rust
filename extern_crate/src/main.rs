@@ -16,6 +16,13 @@
 // rust
 // 没有把模块里的item都对象化
 // 仅仅相当于引入了一个名空间，当然也有 1、引入某个具体的item，用use， 2、引入整个名空间，用 extern crate ...
+/* 必须在 Cargo.toml中声明，否则代码中会提示找不到 crate，在Cargo.toml中声明的依赖 crate 才会被下载
+[dependencies]
+ipnetwork = "0.12.7"
+*/
+/*
+extern crate ipnetwork; // 也是必须的？否则会提示错误： maybe a missing crate
+*/
 
 
 
