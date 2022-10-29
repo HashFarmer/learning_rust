@@ -1,0 +1,10 @@
+1: enum
+enum Continent {
+ Europe,
+ Asia,
+ Africa,
+ America,
+ Oceania,
+}
+let contin = Continent::Asia;
+
