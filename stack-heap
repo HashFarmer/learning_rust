@@ -4,3 +4,18 @@ stack - compilation time
 
 
 heap - runtime 
+
+
+==========================
+
+fn main() {
+    
+    let a = 3.14;
+    let p = &a;
+    println!("{}",a);
+    println!("{}",p);
+    println!("{}",*p);
+}
+
+
+===========================
