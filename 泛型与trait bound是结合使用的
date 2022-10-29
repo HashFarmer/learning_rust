@@ -1,1 +1,15 @@
 每一个泛型参数都必须有一个trait bound
+
+
+
+// 大写的Self是类型，小写的self是类型的一个实例
+
+trait HasSquareRoot {
+ fn sq_root(self) -> Self;
+}
+impl HasSquareRoot for f32 {
+ fn sq_root(self) -> Self { f32::sqrt(self) }
+}
+impl HasSquareRoot for f64 {
+ fn sq_root(self) -> Self { f64::sqrt(self) }
+}
