@@ -2,6 +2,29 @@ trait 可以说是 “功能表”
 impl 可以说是“实现” “功能表”
 struct 可以说是“类型”
 
+trait Cook {
+    fn start(&self);
+}
+trait Wash {
+    fn start(&self);
+}
+struct Chef;
+impl Cook for Chef {
+    fn start(&self) { println!("Cook::start");}
+}
+impl Wash for Chef {
+    fn start(&self) { println!("Wash::start");}
+}
+fn main() {
+    let me = Chef;
+    Cook::start(&me);
+    Wash::start(&me);
+}
+
+
+
+
+
 
 
 每一个泛型参数都必须有一个trait bound
