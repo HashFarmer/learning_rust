@@ -81,7 +81,7 @@ when a = &b, "borrow"
     
     let s1 = String::from("hello"); 
     
-    let len = calculate_length(&s1); // 借用
+    let len = calculate_length(&s1); // 借用 within 函数
     
     println!("The length of '{}' is {}.", s1, len); 
     */
