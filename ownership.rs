@@ -70,3 +70,5 @@ when a = &b, "borrow"
     let s = String::from("hello"); // s -> "hello"
     let s1 = &s;// s1 -> s -> heap区的"hello" ，对引用型变量的引用，java中貌似没有这个概念？
     */
+    
+    // borrow 的发生1、&a，2、函数中，borrow之间的冲突（“可变借用”与“不可变借用”的冲突）
