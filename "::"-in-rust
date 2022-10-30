@@ -1,4 +1,5 @@
 1: enum
+
 enum Continent {
  Europe,
  Asia,
@@ -7,4 +8,11 @@ enum Continent {
  Oceania,
 }
 let contin = Continent::Asia;
+
+
+2：Trait里的方法
+
+
+
+
 
