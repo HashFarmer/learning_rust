@@ -72,3 +72,17 @@ when a = &b, "borrow"
     */
     
     // borrow 的发生1、&a，2、函数中，borrow之间的冲突（“可变借用”与“不可变借用”的冲突）
+    
+    /*
+    //=======================
+    fn calculate_length(s: &String) -> usize { 
+        s.len() 
+    }
+    
+    let s1 = String::from("hello"); 
+    
+    let len = calculate_length(&s1); // 借用
+    
+    println!("The length of '{}' is {}.", s1, len); 
+    */
+    
