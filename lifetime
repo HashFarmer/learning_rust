@@ -1,0 +1,79 @@
+
+生命周期是针对“引用”的？
+生命周期大多情况下是隐式的，可推断的。
+但有时候需要显式地标记出来。
+目的是避免悬垂指针。
+
+
+
+//-------------------------------------
+
+函数返回值为 “引用”，生命周期标注就有用了
+
+//
+fn main() {
+    let a = 2;
+    let b = 3;
+    let result = my_add(&a, &b); // a ,b 前面的 & 必不可少
+    println!("The longest string is {}", result);
+}
+
+// 返回值为 &，lifetime标注就特别重要
+fn my_add(x: &u8, y: &u8) -> u8 {
+    x+y
+}
+
+//----------------------------------
+
+fn main() {
+    let r ;
+    
+    /*
+    println!("r = {}", r);
+    println!("Y = {}", Y);
+    */
+    
+    {
+        let x = 5;
+        r = &x;
+        // 
+    }
+    // 从小域中出来的大域变量，带着被小域修改的结果（r = x;）
+    
+    //println!("r = {}", r);// println!使用的是参数的借用,如果r本身就是一个引用，那就是借用的借用？借用的借用没问题。
+    // 悬垂指针，只有在被使用的时候才会出问题（使用println!时），单纯存在的悬垂指针，编辑器并不出错。
+}
+
+//----------------------------------------
+
+
+fn main() {
+    let string1 = String::from("abcd");
+    let string2 = "xyz";
+    let result = longest(string1.as_str(), string2);
+    println!("The longest string is {}", result);
+}
+
+// lifetime 是人为的延长悬垂指针（引用）的生命
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
+
+// 本来reference的生命周期是到最后一次使用那里，
+// lifetime标注的作用就是
+// enforce a piece of memory is still valid for a reference
+// lifetime：给函数返回的引用强制续命
+
+
+// this function's return type contains a borrowed value, but the signature does not say whether it is borrowed from `x` or `y`
+fn longest(x: &str, y: &str) -> &str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
