@@ -7,5 +7,7 @@ impl some_struct  //赋能某些零散的能力
 
 #
 javascript: this , 
+#
 rust: self , 
-
+#
+vscode插件: rust-analyzer
