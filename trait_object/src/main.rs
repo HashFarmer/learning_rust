@@ -1,6 +1,10 @@
 
 // https://www.youtube.com/watch?v=ReBmm0eJg6g
 // dyn some_trait  is similar to impl some_trait used in trait bound
+/*
+把trait类型化的一种方式
+Box<dyn some_trait>
+*/
 
 pub trait Draw{
     fn draw(&self);
