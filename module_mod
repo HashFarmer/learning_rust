@@ -1,0 +1,5 @@
+mod some_module;
+查找顺序：
+1、本文件
+2、本文件所在目录，文件 some_module.rs
+3、本文件所在目录，文件夹 some_module/mod.rs
