@@ -3,3 +3,6 @@ mod some_module;
 1、本文件
 2、本文件所在目录，文件 some_module.rs
 3、本文件所在目录，文件夹 some_module/mod.rs
+
+
+使用pub use重导出是指把深层的模块、函数和类型定义导出到上层路径，这在接口设计中会经常用到，可以让外部调用更加方便。
