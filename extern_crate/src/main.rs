@@ -5,6 +5,12 @@
 // use是指定某个具体的功能对象，struct 或者 function ？
 // extern crate 引入某一个包，只是一个名空间
 
+// 如果是local的crate呢？
+// 还有一种是“模块”级别的引入，用 mod
+
+
+
+
 // javascript:
 // import {} from ... ， 指明要引入的item
 // import * from ... ，把整个目标模块里的东西引入过来，把其中所有的item都对象化，使用的时候用  "."
