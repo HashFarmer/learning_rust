@@ -1,0 +1,46 @@
+有两种方法使用lib.rs里的item
+
+先用 cargo new --lib monsters 
+
+ cargo new --bin monsters,[亦可]
+
+
+src/lib.rs
+--
+pub fn print_from_monsters(){
+    println!("Printing from crate monsters!");
+}
+
+
+方式一：
+
+src/main.rs
+--
+mod lib;
+use lib::print_from_monsters;
+fn main(){
+    print_from_monsters();
+}
+
+
+方式二：
+
+src/main.rs
+--
+extern crate monsters;  //这里的crate，就是lib.rs文件吧？那么为什么非要用crate，mod不是就足够了，反而又发明一个新的语法。
+use monsters::print_from_monsters;
+fn main(){
+    print_from_monsters();
+}
+
+
+方法三：
+
+src/main.rs
+--
+//不用做extern 的声明
+use monsters::print_from_monsters;
+fn main(){
+    print_from_monsters();
+}
+
