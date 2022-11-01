@@ -12,6 +12,7 @@ phrases_lib = { path = "../phrases_lib" }
 */
 
 // 还有一种是“模块”级别的引入，用 mod
+// mod是用在单个crate内的
 
 
 
