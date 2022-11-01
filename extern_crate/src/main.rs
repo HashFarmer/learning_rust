@@ -5,7 +5,12 @@
 // use是指定某个具体的功能对象，struct 或者 function ？
 // extern crate 引入某一个包，只是一个名空间
 
-// 如果是local的crate呢？
+// 如果是local的crate呢？也是需要在Cargo.toml文件中配置
+/*
+[dependencies]
+phrases_lib = { path = "../phrases_lib" }
+*/
+
 // 还有一种是“模块”级别的引入，用 mod
 
 
