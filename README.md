@@ -15,3 +15,6 @@ javascript: this ,
 rust: self , 
 #
 vscode插件: rust-analyzer
+
+//
+match 是模式匹配，不是单值匹配
