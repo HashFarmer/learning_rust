@@ -1,2 +1,0 @@
- let s = "abcd"; // s -> ss -> "abcd" ，是这样的吗？
- 
