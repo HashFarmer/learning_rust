@@ -1,4 +1,7 @@
 
+ownership: 变量 与 值 之间的关系，名与实之间的关系， 壳与肉之间的关系
+
+
 1、
 
 when a = b , "copy" or "move" 
