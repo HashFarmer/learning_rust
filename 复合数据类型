@@ -7,3 +7,8 @@
 
 2、tuple 与 struct 
 
+
+
+3、创建一个struct 对象的两种方法
+（1）  Struct_Name { }
+（2）  Struct_Name::new()
