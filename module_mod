@@ -1,8 +1,13 @@
 mod some_module;
 查找顺序：
-1、本文件
-2、本文件所在目录，文件 some_module.rs
-3、本文件所在目录，文件夹 some_module/mod.rs
+1、本文件查找 mod some_module { }
+2、本文件所在目录，查找文件 some_module.rs
+3、本文件所在目录，查找文件夹 some_module/mod.rs
 
 
 使用pub use重导出是指把深层的模块、函数和类型定义导出到上层路径，这在接口设计中会经常用到，可以让外部调用更加方便。
+
+
+module结构的的两种目录安排方式：
+1、文件夹 some_module/mod.rs，字module在文件夹中
+2、some_module.rs文件和some_module/文件夹，子目录在文件夹中
