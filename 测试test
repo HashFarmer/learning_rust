@@ -2,7 +2,7 @@
 把要测试的函数放进一个mod里面，并标记 #[cfg(test)]
 测试是针对 --lib crate的？如同同时包含，main 和 lib ，main中也有test模块，那么cargo test会运行main中的test函数吗？
 
-被标记为#[test]的函数调用被测函数
+被标记为#[test]的函数调用“被测函数”
 
 assert!() //测试返回值为 bool型的函数
 assert_eq!() //测试函数返回值与“预期值”是否相当
