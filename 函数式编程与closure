@@ -15,3 +15,6 @@ fn add3<F>(f: F) where F: Fn(i32) -> i32 {
 struct A<F: Fn(i32) -> i32 > {
   f:F
 }
+
+
+
