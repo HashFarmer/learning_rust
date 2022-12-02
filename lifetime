@@ -77,3 +77,22 @@ fn longest(x: &str, y: &str) -> &str {
         y
     }
 }
+
+
+
+
+2、
+'static标注
+
+let s: &'static str = "the string"; //
+
+
+
+
+
+
+
+
+
+
+
