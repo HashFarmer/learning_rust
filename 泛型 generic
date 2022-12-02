@@ -5,3 +5,4 @@ struct A<T>{
 }
 
 struct中的泛型参数T，是用来约束其中的字段的
+而 T 也可以有约束，其约束是 trait
