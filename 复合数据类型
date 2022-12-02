@@ -6,9 +6,19 @@
 
 
 2、tuple 与 struct 
-
+tuple是具体值的集合，tuple是具体值，一次性的
+struct是数据类型的集合，struct能产生这个结构的具体数值
 
 
 3、创建一个struct 对象的两种方法
 （1）  Struct_Name { }
 （2）  Struct_Name::new()
+
+
+4、 tuple struct
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+fn main() {
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+}
