@@ -1,3 +1,19 @@
 The macro println is being used because Rust does not
 support variable args in functions and hence println has to be a macro.
 可变个数的参数
+
+macro 类似于 match 规则
+
+
+
+
+
+
+
+
+
+
+
+
+
+
