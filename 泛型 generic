@@ -1,0 +1,7 @@
+1、泛型struct
+
+struct A<T>{
+  x: T,
+}
+
+struct中的泛型参数T，是用来约束其中的字段的
