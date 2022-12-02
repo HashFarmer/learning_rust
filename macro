@@ -5,7 +5,7 @@ support variable args in functions and hence println has to be a macro.
 macro 类似于 match 规则
 
 
-
+$e : 代表外部输入的对象
 
 
 
