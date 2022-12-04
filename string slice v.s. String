@@ -6,6 +6,14 @@
 2、
 
  let s = "abcd"; // s -> ss -> "abcd" ，是这样的吗？
+ 
+ 
+ 
+ 3、 String的创建
+ 
+String::new()
+String::from()
+"abc".to_string()
 
 
 
