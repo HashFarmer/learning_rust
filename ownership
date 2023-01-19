@@ -1,6 +1,16 @@
 
 ownership: 变量 与 值 之间的关系，名与实之间的关系， 壳与肉之间的关系
 
+[https://www.koderhq.com/tutorial/rust/ownership/]
+What-is-ownership
+The technical details of ownership are somewhat complex, but the concept is fairly simple. Simply put, ownership is the owner of a value.
+
+First, let’s take a quick look at the ownership rules in Rust.
+
+A variable is the owner of a value.
+Only a single owner is allowed.
+When the owner goes out of scope, the value is lost.
+
 
 1、
 
