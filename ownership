@@ -12,6 +12,9 @@ Only a single owner is allowed.
 When the owner goes out of scope, the value is lost.
 
 
+Each value in Rust has a variable that is called owner of the value. 
+
+
 1、
 
 when a = b , "copy" or "move" 
