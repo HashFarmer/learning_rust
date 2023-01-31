@@ -1,3 +1,13 @@
+https://www.tutorialspoint.com/rust/rust_string.htm
+
+The String data type in Rust can be classified into the following −
+
+String Literal(&str)
+
+String Object(String)
+
+
+
 
 1、切片
 切片本身是没有所有权的，它是通过引用语法实现对集合中一段连续的元素序列的借用。
