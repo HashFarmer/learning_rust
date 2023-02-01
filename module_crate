@@ -1,0 +1,12 @@
+1,
+extern crate movies_lib;没必要
+
+
+2，
+在bin crate的Cargo.toml中
+[dependencies]
+movie = { path = "../movie-lib" }   // movie不必须是movie-lib，但是必须与lib crate的名字一样
+
+在lib crate的Cargo.toml中
+[package]
+name = "movie"
