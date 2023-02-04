@@ -8,6 +8,7 @@ impl some_trait for some_struct  //赋能某些标准能力，按照某些标注
 
 impl some_struct  //赋能某些零散的能力，不按照某些模板赋能
 
+trait 里面的方法总要落实到struct或enum上才行
 
 #
 javascript: this , 
