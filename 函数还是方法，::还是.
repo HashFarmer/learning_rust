@@ -2,9 +2,14 @@
 
 函数 用 ::
 
+use public_module_name::function_name;
+
+
+
+
 方法 用 .
 
-
+"Tutorialspoint".to_string()
 
 
 
