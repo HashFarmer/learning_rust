@@ -1,0 +1,14 @@
+
+https://www.tutorialspoint.com/rust/rust_error_handling.htm
+
+两大类：
+
+1、
+Panic Macro and Unrecoverable Errors
+
+
+
+2、
+Result Enum and Recoverable Errors
+
+
