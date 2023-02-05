@@ -1,0 +1,20 @@
+
+
+如何理解std::io::stdin() 呢？
+std::io::stdin().read_line(&mut line).unwrap();
+
+
+std::io::stdin() 返回的是“输入设备的虚拟对象化”？buffer？
+
+read_line(&mut line)，line是返回对象？不是，line不是返回的对象，line是被修改的参数，有的函数就是这样的功能，会修改参数的值，也是函数运行的后果之一，虽然不是以返回值形式。
+
+read_line()的返回值是Result，是从输入设备读取数据
+
+//
+
+std::io::stdout().write("Tutorials ".as_bytes()).unwrap();
+
+write()是写数据到输出设备，返回值是Result
+
+
+
