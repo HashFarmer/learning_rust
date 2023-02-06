@@ -15,3 +15,20 @@ fn main() {
    println!("{:?}",iter.next());
 }
 
+
+//
+Illustration:iter()
+The iter() function uses the concept of borrowing.
+It returns a reference to each element of the collection, leaving the collection untouched and available for reuse after the loop.
+
+//
+Illustration - into_iter()
+This function uses the concept of ownership. 
+It moves values in the collection into an iter object, i.e., the collection is consumed and it is no longer available for reuse.
+
+//
+Illustration - for and iter_mut()
+This function is like the iter() function. However, this function can modify elements within the collection.
+
+
+
