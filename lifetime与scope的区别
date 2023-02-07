@@ -25,7 +25,7 @@ fn main() {
     println!("{} is longer", r);
 }
 
-/// 下面可以执行
+///1、 下面可以执行
 
 fn longer(s: &str) -> &str {
     s
@@ -39,6 +39,23 @@ fn main() {
     }
     println!("{} is longer", r);
 }
+
+
+///2、 运行不了，为什么？与（1、）的区别在哪里？
+
+fn longest_word(x: &String) -> &String {
+    x
+}
+
+fn main() {
+    let result;
+    {
+        let magic1 = String::from("abracadabra!");
+        result = longest_word(&magic1);// borrowed value does not live long enough
+    }
+    println!("The longest magic word is {}", result);
+}
+
 
 
 /// 为什么加上生命周期标注就可以运行了？
@@ -75,6 +92,6 @@ fn main() {
 fn longest_word(x: &String) -> &String {
     x
 }
-
-
+//
+https://learn.microsoft.com/en-us/training/modules/rust-memory-management/3-validate-references-with-lifetimes
 
