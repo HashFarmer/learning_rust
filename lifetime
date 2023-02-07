@@ -5,7 +5,6 @@
 目的是避免悬垂指针。
 
 
-
 //-------------------------------------
 
 函数返回值为 “引用”，生命周期标注就有用了
@@ -59,6 +58,7 @@ fn main() {
 }
 
 // lifetime 是人为的延长悬垂指针（引用）的生命
+// 并非如上
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
@@ -71,6 +71,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 // lifetime标注的作用就是
 // enforce a piece of memory is still valid for a reference
 // lifetime：给函数返回的引用强制续命
+// 并非如上
 
 
 // this function's return type contains a borrowed value, but the signature does not say whether it is borrowed from `x` or `y`
