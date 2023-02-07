@@ -56,6 +56,19 @@ fn main() {
     println!("The longest magic word is {}", result);
 }
 
+///3、依然无法运行，说明 生命周期标注并不能 延长生存周期
+fn longest_word<'a>(x: &'a String) -> &'a String {
+    x
+}
+
+fn main() {
+    let result;
+    {
+        let magic1 = String::from("abracadabra!");
+        result = longest_word(&magic1);// borrowed value does not live long enough
+    }
+    println!("The longest magic word is {}", result);
+}
 
 
 /// 为什么加上生命周期标注就可以运行了？
