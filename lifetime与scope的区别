@@ -49,4 +49,16 @@ fn main() {
 }
 
 
+/// 下面例子表明不在于函数返回值是引用才需要生命周期标注
 
+fn main() {
+    let magic1 = String::from("abracadabra!");
+    let magic2 = String::from("shazam!");
+
+    let result = longest_word(&magic1);
+    println!("The longest magic word is {}", result);
+}
+
+fn longest_word(x: &String) -> &String {
+    x
+}
