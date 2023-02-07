@@ -1,2 +1,56 @@
 
 https://www.javatpoint.com/rust-lifetime
+
+
+/// String
+
+fn main() {
+    let mut r = String::from("outer");
+    
+    {
+        let x = String::from("inner");
+        r = x; // 会带出来内层的结果
+        // 
+    }
+    
+    println!("{}", r);
+}
+
+/// int
+
+fn main() {
+    let mut r = 123;
+    
+    {
+        let x = 456;
+        r = x;
+        // 
+    }
+    
+    println!("{}", r);
+}
+
+/// &str
+
+fn main() {
+    let mut r = "abc";
+    
+    {
+        let x = "xyz";
+        r = x;
+        // 
+    }
+    
+    println!("{}", r);
+}
+
+
+
+
+
+
+
+
+
+
+
