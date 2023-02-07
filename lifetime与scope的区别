@@ -3,6 +3,7 @@ https://www.runoob.com/rust/rust-lifetime.html
 
 lifetime 与 scope 有什么本质区别吗？
 
+///
 {
     let r;
 
@@ -32,6 +33,17 @@ fn main() {
     {
         let s1 = "rust";
         r = s1; //因为没有borrow？
+    }
+    println!("{} is longer", r);
+}
+
+///
+
+fn main() {
+    let r;
+    {
+        let s1 = 123;
+        r = &s1; //不带&可以执行，带&无法执行
     }
     println!("{} is longer", r);
 }
