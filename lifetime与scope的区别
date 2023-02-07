@@ -96,6 +96,7 @@ fn main() {
 
 
 /// 为什么加上生命周期标注就可以运行了？
+// 仅仅是因为去除了歧义性？
 
 fn longer<'a>(s1: &'a str, s2: &'a str) -> &'a str {
     if s2.len() > s1.len() {
