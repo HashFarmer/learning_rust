@@ -1,0 +1,30 @@
+
+https://www.runoob.com/rust/rust-lifetime.html
+
+lifetime 与 scope 有什么本质区别吗？
+
+{
+    let r;
+
+    {
+        let x = 5;
+        r = &x;
+    }
+
+    println!("r: {}", r);
+}
+
+///
+
+fn main() {
+    let r;
+    {
+        let s1 = "rust_long";
+        r = &s1; //^^^ borrowed value does not live long enough
+    }
+    println!("{} is longer", r);
+}
+
+///
+
+
