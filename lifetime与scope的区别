@@ -25,6 +25,18 @@ fn main() {
     println!("{} is longer", r);
 }
 
+/// 可以执行
+
+fn main() {
+    let r;
+    {
+        let s1 = "rust";
+        r = s1; //因为没有borrow？
+    }
+    println!("{} is longer", r);
+}
+
+
 ///1、 下面可以执行
 
 fn longer(s: &str) -> &str {
