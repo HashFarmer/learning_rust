@@ -25,7 +25,20 @@ fn main() {
     println!("{} is longer", r);
 }
 
-///
+/// 下面可以执行
+
+fn longer(s: &str) -> &str {
+    s
+}
+
+fn main() {
+    let r;
+    {
+        let s1 = "rust";
+        r = longer(s1);
+    }
+    println!("{} is longer", r);
+}
 
 
 /// 为什么加上生命周期标注就可以运行了？
@@ -62,3 +75,6 @@ fn main() {
 fn longest_word(x: &String) -> &String {
     x
 }
+
+
+
