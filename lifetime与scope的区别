@@ -1,7 +1,7 @@
 
 https://www.runoob.com/rust/rust-lifetime.html
 
-lifetime 与 scope 有什么本质区别吗？
+lifetime 与 scope 有什么本质区别吗？ variable scope <--> reference lifetime
 
 lifetime 是 reference 的scope？
 
