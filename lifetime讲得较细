@@ -48,8 +48,28 @@ fn main() {
 
 
 
+// 1、
+Preventing Dangling references with Lifetimes
+这个层面是编译器自动实现的
 
+// 2、
+Lifetime annotation syntax：
+（1）Lifetime annotation does not change how long any of the references live.
+（2）Functions can also accept the references of any lifetime by using the generic lifetime parameter.
+（3）Lifetime annotation describes the relationship among the lifetimes of multiple parameters.
 
+// 3、
+lifetime annotation 用在下面几个地方：
+（1）Lifetime Annotations in Function Signatures
+（2）Lifetime Annotations in struct
+（3）impl blocks
+
+//
+'static
+The lifetime named as 'static is a special lifetime.
+It signifies that something has the lifetime 'static will have the lifetime over the entire program. 
+Mainly 'static lifetime is used with the strings. 
+The references which have the 'static lifetime are valid for the entire program.
 
 
 
