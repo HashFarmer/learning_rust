@@ -25,6 +25,18 @@ String::new()
 String::from()
 "abc".to_string()
 
+4、
+fn main() {
+
+    let r;
+    let x = "inner";
+    r = x; 
+    
+    println!("{}", x);
+    println!("{}", r);
+}
+
+
 
 
 
