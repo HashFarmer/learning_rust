@@ -25,7 +25,8 @@ String::new()
 String::from()
 "abc".to_string()
 
-4、
+
+4、&str是复制？
 fn main() {
 
     let r;
