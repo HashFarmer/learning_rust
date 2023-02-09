@@ -1,0 +1,53 @@
+1、转移move
+
+fn main() {
+    let fruit = String::from("Apple");  // fruit comes into scope
+    
+    // ownership of fruit moves into the function
+    print_fruit(fruit);
+    
+    // fruit is moved to the function so is no longer available here
+    // error
+    // println!("fruit = {}", fruit);
+}
+
+fn print_fruit(str: String) {   // str comes into scope
+    println!("str = {}", str);
+}   // str goes out of scope and is dropped, plus memory is freed
+
+2、借用borrow
+
+fn main() {
+    let fruit = String::from("Apple");  // fruit comes into scope
+    
+    // ownership of fruit moves into the function
+    print_fruit(&fruit);
+    
+    // fruit is moved to the function so is no longer available here
+    // error
+    println!("fruit = {}", fruit);
+}
+
+fn print_fruit(str: &String) {   // str comes into scope
+    println!("str = {}", str);
+}   // str goes out of scope and is droppe
+
+3、复制copy
+
+fn main() {
+    // number comes into scope
+    let number = 10;
+    
+    // value of the number is copied into the function
+    print_number(number);
+    
+    // number variable can be used here
+    println!("number = {}", number);
+}
+
+fn print_number(value: i32) { // value comes into scope
+    println!("value = {}", value);
+}   // value goes out of scope
+
+
+
