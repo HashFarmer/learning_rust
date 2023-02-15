@@ -13,3 +13,49 @@ fn longest_word() -> &String {
 }
 
 
+
+
+
+fn do1(s: &str) -> &str {
+    s
+}
+
+//为什么这个行
+fn do2() -> &'static str{
+    let x = "abcd";
+    x
+}
+
+// 为什么这个不行，生命周期标注也救不了
+fn do3() ->&'static u8{
+    let x = 123;
+    &x
+}
+
+// 为什么这个不行，生命周期标注也救不了
+fn do4() ->&'static String {
+    let x = String::from("abcde");
+    &x
+}
+
+
+fn main() {
+    
+    let s1 = "rust";
+    let r = do1(s1);
+    
+    println!("{} is longer", r);
+
+    let p = do2();
+    println!("{} is long", p);
+
+    let q = do3();
+    println!("{} is do3", q);
+
+    let s = do4();
+    println!("{} is do4", s);
+
+}
+
+
+
