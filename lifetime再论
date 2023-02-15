@@ -1,0 +1,15 @@
+
+
+
+fn main() {
+
+    let result = longest_word();
+    println!("The longest magic word is {}", result);
+}
+
+fn longest_word() -> &String {
+    let x = String::from("abracadabra!");
+    &x
+}
+
+
