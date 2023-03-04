@@ -116,3 +116,17 @@ when a = &b, "borrow"
     println!("The length of '{}' is {}.", s1, len); 
     */
     
+
+3\
+
+fn main() {
+    let mut x = vec![1, 2, 3];
+
+    let y = &mut x; // mutable borrow of x
+
+    println!("{}", x[2]);// error，因为由隐含的可变借用
+
+    println!("{}", y[0]); // 本句后，y借用失效
+
+    println!("{}", x[1]);// ok
+}
