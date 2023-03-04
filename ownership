@@ -130,3 +130,20 @@ fn main() {
 
     println!("{}", x[1]);// ok
 }
+
+
+
+4、
+fn main() {
+    let mut x = vec![1, 2, 3];
+
+    let y = &mut x; // mutable borrow of x
+
+    println!("{:?}",y);
+
+    let yy = &mut x; // 别人还了之后再借，这一句的位置很重要
+
+    println!("{:?}",yy);
+
+
+}
