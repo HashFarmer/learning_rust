@@ -5,6 +5,8 @@ lifetime 与 scope 有什么本质区别吗？ variable scope <--> reference lif
 
 lifetime 是 reference 的scope？
 
+chatgpt回答：Scope refers to the accessibility of variables, while lifetime refers to the validity of references.
+
 ///
 {
     let r;
