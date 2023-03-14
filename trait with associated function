@@ -1,0 +1,29 @@
+trait是能力描述集，impl 是赋能，struct是类型
+
+trait中的方法，按照其第一个参数是否 self，也可以分为实例方法和struct方法，实例方法可以用 "."调用，struct方法可以用 "::"调用
+
+
+associate function == static method == class method
+
+
+
+
+trait MyTrait {
+    fn my_associated_function(value: u32) -> u32;
+}
+
+struct MyStruct;
+
+impl MyTrait for MyStruct {
+    fn my_associated_function(value: u32) -> u32 {
+        value * 2
+    }
+}
+
+fn main() {
+    let result = MyStruct::my_associated_function(5);
+    println!("Result: {}", result);
+}
+
+
+
