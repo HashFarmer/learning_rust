@@ -137,3 +137,33 @@ fn longest_word(x: &String) -> &String {
 //
 https://learn.microsoft.com/en-us/training/modules/rust-memory-management/3-validate-references-with-lifetimes
 
+//------------------------------------------------------------------------------------------------------------
+// scope
+The scope of an item is determined by its "visibility" and "accessibility" from different parts of the program.
+
+chatgpt: explain scope in rust
+
+//
+fn main() {
+    let x = 5; // local variable
+    {
+        let y = 10; // nested local variable
+        println!("x: {}, y: {}", x, y);
+    }
+    println!("x: {}", x);
+}
+
+// lifetime的概念是隐性存在的，lifetime的标注在歧义情况下使用
+
+
+
+
+
+
+
+
+
+
+
+
+
