@@ -1,0 +1,44 @@
+
+trait Animal {
+    fn speak(&self);
+}
+
+struct Cat {
+    name: String,
+}
+
+impl Animal for Cat {
+    fn speak(&self) {
+        println!("{} says meow!", self.name);
+    }
+}
+
+struct Dog {
+    name: String,
+}
+
+impl Animal for Dog {
+    fn speak(&self) {
+        println!("{} says woof!", self.name);
+    }
+}
+
+fn main() {
+    let mut animals: Vec<Box<dyn Animal>> = Vec::new();
+
+    let cat = Cat { name: String::from("Fluffy") };
+    let dog = Dog { name: String::from("Fido") };
+
+    animals.push(Box::new(cat));
+    animals.push(Box::new(dog));
+
+    for animal in animals.iter() {
+        animal.speak();
+    }
+}
+
+
+
+
+
+
