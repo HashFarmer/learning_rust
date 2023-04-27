@@ -82,6 +82,8 @@ when a = b , "copy" or "move"
 
 2、
 
+**Borrowing** refers to the rules around how references interact. 
+
 when a = &b, "borrow"
 
     /*
