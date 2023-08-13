@@ -38,6 +38,9 @@ Iterators are part of Rust's standard library and are used extensively to work w
 Iterators are used to abstract away the details of iteration, making code cleaner and more readable while also promoting safety. 
 They are based on a concept of lazy evaluation, meaning that items are generated or fetched one at a time as needed, which can be more memory-efficient than generating all items upfront.
 
+// 最主要的是Iterator trait 有很多方法，可以直接用
+The Iterator trait also has many other methods that provide useful functionality, such as map, filter, count, sum, and more.
+
 // 1. Creating an Iterator: You can create an iterator from any collection or range of values using the .iter() method or other iterator methods depending on the collection type.
 let numbers = vec![1, 2, 3, 4, 5];
 let iter = numbers.iter(); // Create an iterator over the elements of the vector
