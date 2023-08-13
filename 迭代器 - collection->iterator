@@ -31,4 +31,39 @@ Illustration - for and iter_mut()
 This function is like the iter() function. However, this function can modify elements within the collection.
 
 
+// Iterator的基本逻辑就是不用自写循环去处理collections
+In Rust, an iterator is a programming construct that provides a way to traverse a collection of items, one at a time, without the need to explicitly manage the indexing or iteration logic. 
+Iterators are part of Rust's standard library and are used extensively to work with collections like arrays, vectors, hash maps, and more.
+
+Iterators are used to abstract away the details of iteration, making code cleaner and more readable while also promoting safety. 
+They are based on a concept of lazy evaluation, meaning that items are generated or fetched one at a time as needed, which can be more memory-efficient than generating all items upfront.
+
+// 1. Creating an Iterator: You can create an iterator from any collection or range of values using the .iter() method or other iterator methods depending on the collection type.
+let numbers = vec![1, 2, 3, 4, 5];
+let iter = numbers.iter(); // Create an iterator over the elements of the vector
+
+// 2. Using Iterator Methods: Once you have an iterator, you can use various methods provided by the iterator trait to work with the data. These methods include operations like map, filter, fold, and more.
+let doubled_numbers = numbers.iter().map(|x| x * 2).collect::<Vec<_>>();
+let even_numbers = numbers.iter().filter(|x| x % 2 == 0).collect::<Vec<_>>();
+let sum = numbers.iter().fold(0, |acc, &x| acc + x);
+
+// 3. Consuming an Iterator: Iterators are consumed when you use them to generate values. Once an iterator is consumed, it cannot be used again.
+let sum = numbers.iter().sum::<i32>(); // Consumes the iterator to calculate the sum
+
+// 4. Chaining Iterators: You can chain multiple iterator methods together to create more complex transformations.
+let result = numbers.iter()
+                   .filter(|x| *x % 2 == 0)
+                   .map(|x| x * 3)
+                   .collect::<Vec<_>>();
+
+// 5. Using for Loop: Rust provides a convenient syntax for using iterators in a for loop.
+for num in numbers.iter() {
+    println!("Number: {}", num);
+}
+
+Overall, iterators provide a clean and efficient way to work with collections in Rust while leveraging Rust's ownership and borrowing system to ensure memory safety. 
+They are a core component of Rust's approach to managing data and promoting code reliability.
+
+
+
 
