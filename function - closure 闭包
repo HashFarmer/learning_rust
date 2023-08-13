@@ -23,5 +23,20 @@ fn main() {
 }
 
 
+// 注意与 Block scope 区分
+
+fn main() {
+    let x = 5; // x is valid from here
+
+    {
+        let y = 10; // y is valid only within this block
+        println!("x: {}, y: {}", x, y);
+    } // y goes out of scope here
+
+    // println!("x: {}, y: {}", x, y); // This would result in an error because y is not in scope here
+} // x goes out of scope here
+
+
+
 
 
