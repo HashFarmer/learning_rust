@@ -1,4 +1,7 @@
 
+// trait object 是一种类型限定方法
+
+
 trait Animal {
     fn speak(&self);
 }
