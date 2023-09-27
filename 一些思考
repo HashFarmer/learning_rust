@@ -2,6 +2,6 @@ Rust的几个特点：
 
 1、类型声明后置
 
-2、trait 与 struct 的分离
+2、trait 与 struct 的分离, 共性的 methods 抽象成 trait，非共性的 methods 直接impl即可
 
-3、 trait可以做类型
+3、 trait可以做类型 ，trait是一种限定， type 也是一种限定
