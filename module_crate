@@ -10,3 +10,10 @@ movie = { path = "../movie-lib" }   // movie不必须是movie-lib，但是必须
 在lib crate的Cargo.toml中
 [package]
 name = "movie"
+
+
+3，
+
+mod 引用模块？
+
+extern crate 引用lib project？
