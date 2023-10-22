@@ -7,6 +7,8 @@
 lifetime的本质是给ownership? borrowing?一个期限。//2023-10-22
 
 
+什么时候会出现lifetime问题呢？返回值是reference的时候。 而且返回reference 的lifetime依赖于输入参数的reference的lifetime。不能凭空返回reference吧？
+
 //-------------------------------------
 
 函数返回值为 “引用”，生命周期标注就有用了
