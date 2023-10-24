@@ -1,0 +1,11 @@
+
+因为 大小未知，所以加 &,使编译时大小可知
+
+
+
+rust 中有两种泛型机制：
+
+1、 static dispatch (also called compile-time polymorphism)  ，也即 < T > 方法
+2、 dynamic dispatch (also called runtime polymorphism)， 也即 &dyn Trait 方法
+
+
