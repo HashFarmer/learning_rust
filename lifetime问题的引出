@@ -1,4 +1,7 @@
 
+rust中很容易出现 ownership 被 taken ，所以很多函数用的都是参数的 reference , 还会返回 reference，这时就出现lifetime问题了。 
+
+
 生命周期是针对“引用”的？
 生命周期大多情况下是隐式的，可推断的。
 但有时候需要显式地标记出来。
