@@ -5,8 +5,33 @@ https://www.youtube.com/watch?v=BpPEoZW5IiY&t=10793s
 
 
 
+### Ownership
+
+1. Each value has an owner.
+2. There can only be one owner at a time.
+3. When the owner goes out of scope , the value will be dropped. {相当于退休了，要腾退办公室。或者完成任务后，向组织退回各种资源。}
+
+到底什么是Owner？
+The owner of a value is the variable or the data structure that holds it and is responsible for allocating and freeing the memory used to store that data.  {owner负责申请资源，并且完事后退回资源}
 
 
+## Stack Memory
+uknown size of data will be 分配到栈区但是在堆区有一个指针指向它。
+
+## Copy ~ Move
+1.  在 = 时
+2.  在函数时
+
+## 三种性质的函数
+1、消耗性的函数
+2、借用性的函数
+3、复制性的函数
+
+## 函数返回值的本质
+就是在函数的局部空间内生成一个东西，返回给调用者
+
+## 函数参数的本质
+就是在函数的局部空间内，先生成几个对象，这些生成动作，可能导致对外层空间对象的掠夺。
 
 
 ###  lifetime
