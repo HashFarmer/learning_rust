@@ -63,7 +63,10 @@ string literal 不就是 &str 类型吗？ string literal 与 string slice 到�
 
 
 
+### enum
 
+Option 里面的
+Some()是独立于 Option enum 存在的。
 
 
 
