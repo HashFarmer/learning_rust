@@ -69,10 +69,15 @@ Option 里面的
 Some()是独立于 Option enum 存在的。
 
 
+### methods and associated functions
+
+In Rust, an associated function is a function that is associated with a type, rather than an instance of that type. It is similar to a static method in other programming languages. 
+Associated functions are often used for constructors or other utility functions that do not need to operate on an instance of the type.
 
 
 
-
+###  associated type
+是对trait进行泛型的另一种方法
 
 
 
