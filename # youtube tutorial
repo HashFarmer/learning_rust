@@ -34,6 +34,31 @@ uknown size of data will be 分配到栈区但是在堆区有一个指针指向�
 就是在函数的局部空间内，先生成几个对象，这些生成动作，可能导致对外层空间对象的掠夺。
 
 
+### String   &str
+
+1. A String is a heap-allocated string type that owns its contents and is mutable.
+2. A &str is an immutable sequence of UTF-8 bytes in memory, it does not own the underlying data and is immutable.
+3. Think of &str as a view on a sequence of characters (stored as UTF-8 bytes) in memory.
+
+## String Literal
+1. A string literal is a sequence of characters enclosed in double quotes("").
+2. Fixed size, compile-time known sequence of UTF-8 bytes.
+3. The type is  &'static str , which indicates the data is stored in static storage, meaning it is valid throught the entire lifetime of the program.
+4. The data is hardcored into the executable and stored in read-only memory, meaning they are immutable.
+
+## 
+string literal 不就是 &str 类型吗？ string literal 与 string slice 到底有什么区别？
+
+##
+&str -> String ,  "hello".to_string()
+
+## 有关的方法
+.push('')  单引号，单个字符
+.push("")  双引号，&str
+.replace() 
+
+
+
 ###  lifetime
 
 1. Another kind of generic ensuring that references are valid as long as needed
