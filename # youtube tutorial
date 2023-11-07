@@ -78,6 +78,9 @@ Associated functions are often used for constructors or other utility functions 
 
 ###  associated type
 是对trait进行泛型的另一种方法
+# 注意与 type alias 相区别
+
+
 
 
 
