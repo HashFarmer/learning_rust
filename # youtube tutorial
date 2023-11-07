@@ -82,7 +82,12 @@ Associated functions are often used for constructors or other utility functions 
 
 
 
+### module system
 
+# crate root
+-- source file that is the root module of the crate
+-- in binaries: src/main.rs
+-- in libraries: src/lib.rs
 
 
 
