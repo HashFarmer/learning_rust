@@ -1,0 +1,12 @@
+
+函数的本质是 一个重复调用的局部空间，调用函数相当于在调用点插入了一个局部空间，参数都是这个局部空间的局部变量
+
+
+
+# 不是所有的函数都需要unwrap
+
+In Rust, the unwrap() method is a convenient way to extract the value from a Result or Option type, which are used to represent computations that might succeed (Ok or Some) or fail (Err or None). 
+The unwrap() method is a shorthand for handling the Result or Option and extracting the value when it's successful, or panicking if it's an error.
+
+返回值为Result 或 Option 的需要 unwrap.
+
