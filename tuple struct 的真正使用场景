@@ -1,0 +1,28 @@
+
+# 1
+描述二维空间或三维空间的一个点
+
+// Define a tuple struct named 'Point' with two fields of type 'f64'
+struct Point(f64, f64);
+
+// Implement a method for the 'Point' struct
+impl Point {
+    // A method to create a new Point instance
+    fn new(x: f64, y: f64) -> Point {
+        Point(x, y)
+    }
+
+    // A method to calculate the distance between two points
+    fn distance(&self, other: &Point) -> f64 {
+        ((self.0 - other.0).powi(2) + (self.1 - other.1).powi(2)).sqrt()
+    }
+}
+
+fn main() {
+    // Create two Point instances using the tuple struct
+    let p1 = Point::new(1.0, 2.0);
+    let p2 = Point::new(4.0, 6.0);
+
+    // Calculate and print the distance between the two points
+    println!("Distance between p1 and p2: {}", p1.distance(&p2));
+}
