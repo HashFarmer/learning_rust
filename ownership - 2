@@ -2,3 +2,6 @@
 不管是简单的还是复杂的数据，都有一个owner
 
 borrowing可以理解为“跳板”
+
+# ownership 机制的作用
+Ownership rules ensure automatic cleanup, avoiding potential memory leaks and dangling pointers.
