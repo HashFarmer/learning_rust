@@ -1,0 +1,135 @@
+
+# 1 , &dyn some_trait 在函数中
+
+trait Shape {
+  fn sing(&self);
+}
+
+struct Circle;
+
+impl Shape for Circle {
+  fn sing(&self) {
+    println!("Circle: La la la");
+  }
+}
+
+struct Square;
+
+impl Shape for Square {
+  fn sing(&self) {
+    println!("Square: Do do do");
+  }
+}
+
+fn make_it_sing(shape: &dyn Shape) {
+  shape.sing();
+}
+
+fn main() {
+  let circle = Circle;
+  let square = Square;
+
+  make_it_sing(&circle); // Calls Circle::sing at runtime
+  make_it_sing(&square); // Calls Square::sing at runtime
+}
+
+# 1.2
+trait Plugin {
+  fn execute(&self);
+}
+
+struct LoggingPlugin;
+
+impl Plugin for LoggingPlugin {
+  fn execute(&self) {
+    println!("Logging something!");
+  }
+}
+
+struct NetworkingPlugin;
+
+impl Plugin for NetworkingPlugin {
+  fn execute(&self) {
+    println!("Sending data over network!");
+  }
+}
+
+fn run_plugin(plugin: &dyn Plugin) {
+  plugin.execute();
+}
+
+fn main() {
+  let logging_plugin = LoggingPlugin;
+  let network_plugin = NetworkingPlugin;
+
+  run_plugin(&logging_plugin); // Calls LoggingPlugin::execute at runtime
+  run_plugin(&network_plugin); // Calls NetworkingPlugin::execute at runtime
+}
+
+
+# 2 ， 用在 Box 中
+
+trait Animal {
+    fn speak(&self);
+}
+
+struct Dog;
+
+impl Animal for Dog {
+    fn speak(&self) {
+        println!("Woof!");
+    }
+}
+
+struct Cat;
+
+impl Animal for Cat {
+    fn speak(&self) {
+        println!("Meow!");
+    }
+}
+
+fn main() {
+    let animals: Vec<Box<dyn Animal>> = vec![
+        Box::new(Dog {}),
+        Box::new(Cat {}),
+    ];
+
+    for animal in animals {
+        animal.speak();
+    }
+}
+
+
+# 2.2
+trait Animal {
+    fn make_sound(&self);
+}
+
+struct Dog;
+struct Cat;
+
+impl Animal for Dog {
+    fn make_sound(&self) {
+        println!("Woof!");
+    }
+}
+
+impl Animal for Cat {
+    fn make_sound(&self) {
+        println!("Meow!");
+    }
+}
+
+fn main() {
+    let dog: Box<dyn Animal> = Box::new(Dog);
+    let cat: Box<dyn Animal> = Box::new(Cat);
+
+    dog.make_sound();
+    cat.make_sound();
+}
+
+
+###
+
+
