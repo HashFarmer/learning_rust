@@ -1,0 +1,41 @@
+
+
+trait Drawable {
+    fn draw(&self);
+}
+
+trait Movable {
+    fn move_to(&mut self, x: i32, y: i32);
+}
+
+trait DrawableMovable: Drawable + Movable {}
+
+struct Square {
+    x: i32,
+    y: i32,
+    side: i32,
+}
+
+impl Drawable for Square {
+    fn draw(&self) {
+        // Implementation for drawing a square
+    }
+}
+
+impl Movable for Square {
+    fn move_to(&mut self, x: i32, y: i32) {
+        self.x = x;
+        self.y = y;
+    }
+}
+
+impl DrawableMovable for Square {}
+
+fn main() {
+    let mut square = Square { x: 0, y: 0, side: 10 };
+    square.draw();
+    square.move_to(10, 10);
+    square.draw();
+}
+
+###
