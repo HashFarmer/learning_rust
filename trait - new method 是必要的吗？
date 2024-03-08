@@ -1,0 +1,57 @@
+###
+
+一个struct的两种初始化方法，【1】 直接初始化，安装struct的定义，逐个field赋值，【2】
+
+###
+
+// Define a trait
+trait Animal {
+    fn new(name: &str) -> Self;
+    fn speak(&self);
+}
+
+// Implement the trait for a struct
+struct Dog {
+    name: String,
+}
+
+impl Animal for Dog {
+    fn new(name: &str) -> Self {
+        Dog {
+            name: name.to_string(),
+        }
+    }
+
+    fn speak(&self) {
+        println!("{} says: Woof!", self.name);
+    }
+}
+
+struct Cat {
+    name: String,
+}
+
+impl Animal for Cat {
+    fn new(name: &str) -> Self {
+        Cat {
+            name: name.to_string(),
+        }
+    }
+
+    fn speak(&self) {
+        println!("{} says: Meow!", self.name);
+    }
+}
+
+fn main() {
+    let dog = Dog::new("Buddy");
+    let cat = Cat::new("Whiskers");
+
+    dog.speak(); // Buddy says: Woof!
+    cat.speak(); // Whiskers says: Meow!
+}
+
+
+###
+
+
