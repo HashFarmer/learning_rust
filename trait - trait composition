@@ -32,9 +32,9 @@ impl Movable for Square {
 impl DrawableMovable for Square {}
 
 fn main() {
-    let mut square = Square { x: 0, y: 0, side: 10 };
-    square.draw();
-    square.move_to(10, 10);
+    let mut square = Square { x: 0, y: 0, side: 10 };  //定义“data”的时候，不用考虑trait问题，只考虑struct定义
+    square.draw(); // 使用trait的时候，考虑有“data”实现了哪些trait
+    square.move_to(10, 10);  // 
     square.draw();
 }
 
