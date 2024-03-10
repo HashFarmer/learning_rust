@@ -1,0 +1,10 @@
+
+没有let过的struct，enum，都是模板或者蓝图，没有生命的东西
+
+
+在mod里，大概是没有let的东西的
+
+只有let过的东西，才有了life，进而有lifetime的问题。
+
+
+#
