@@ -5,7 +5,7 @@ fn main() {
   let y = 11;
   {
       let x = 13; // shadows the outer x
-      println!("Inner x: {}", x); // prints "Inner x: 13" ， 外部的x仍然存在，只是
+      println!("Inner x: {}", x); // prints "Inner x: 13" ， 外部的x仍然存在，只是被shadow了
       println!("Outer y: {}", y);
 
   }
