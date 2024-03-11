@@ -1,3 +1,46 @@
+#######
+
+fn main() {
+  let x = 12;
+  let y = 11;
+  {
+      let x = 13; // shadows the outer x
+      println!("Inner x: {}", x); // prints "Inner x: 13" ， 外部的x仍然存在，只是
+      println!("Outer y: {}", y);
+
+  }
+  println!("Outer x: {}", x); // prints "Outer x: 42"
+}
+
+
+######
+
+fn main() {
+    let x = 5; // Original `x` binding
+    println!("x = {}", x); // Prints "x = 5"
+
+    let x = x * 2; // Shadows the original `x` with a new binding
+    println!("x = {}", x); // Prints "x = 10"
+
+    {
+        let x = x * 3; // Shadows the previous `x` within this block
+        println!("x = {}", x); // Prints "x = 30"
+    }
+
+    println!("x = {}", x); // Prints "x = 10" (the shadowed value from the previous block is gone)
+}
+
+
+######
+
+
+
+
+
+
+
+
+
 
 https://www.runoob.com/rust/rust-lifetime.html
 
